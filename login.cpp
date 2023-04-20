@@ -1,3 +1,4 @@
+#include<stdlib.h>
 #include<bits/stdc++.h>
 #include<iostream>
 #include<cstring>
@@ -28,20 +29,24 @@ void Login :: registration(char user_id[],char psswd[]){
         temp = new struct data;
         if(temp == NUL){
             cout<<"User Registration Failed.. Try Again..!!\n\n\n\n";
-        
+        system("/home/simply_clever/Desktop/progs/Login-page-implementation-using-OOPS-in-C-/myfile.sh");
         }
         strcpy(temp->name,user_id);
         strcpy(temp->pwd,psswd);
         temp->next = NUL;
         start = temp;
         cout<<"Registration Successfull..!!\n\n\n\n";
-    }
+
+        system("/home/simply_clever/Desktop/progs/Login-page-implementation-using-OOPS-in-C-/myfile.sh");
+        }
     else{
         node = new struct data;
         temp = start;
         if(node == NUL){
             cout<<"User Registration Failed.. Try Again..!!\n\n\n\n";
-    
+
+            system("/home/simply_clever/Desktop/progs/Login-page-implementation-using-OOPS-in-C-/myfile.sh");
+
         }
         while(temp->next != NUL){
             temp = temp->next;
@@ -59,15 +64,21 @@ void Login :: signin(char user_id[],char psswd[]){
     while(temp!=NUL){
         if(strcmp(user_id,temp->name) == 0){
             if(strcmp(psswd,temp->pwd) == 0){
-                cout<<"Login Successfull..!!\n\n\n\n";   
-            }
+                cout<<"Login Successfull..!!\n\n\n\n";
+
+                system("/home/simply_clever/Desktop/progs/Login-page-implementation-using-OOPS-in-C-/myfile.sh");
+        }
             else{
                 cout<<"Incorrect password.. Please try Again...\n";
-            }
+
+                system("/home/simply_clever/Desktop/progs/Login-page-implementation-using-OOPS-in-C-/myfile.sh");
+        }
         }
         else{
             cout<<"Incorrect Username Or Password..!!\n\n\n\n";
-            break;
+
+            system("/home/simply_clever/Desktop/progs/Login-page-implementation-using-OOPS-in-C-/myfile.sh");
+        break;
         }
         temp=temp->next;            
 
@@ -79,11 +90,14 @@ int main(){
     int choice;
     char user_name[100],password[100];
     while(1){
+
+        system("/home/simply_clever/Desktop/progs/Login-page-implementation-using-OOPS-in-C-/myfile.sh");
         cout<<"Enter 1 to Register....\n";
         cout<<"Enter 2 to Login.......\n";
         cout<<"Enter 3 to Exit........\n";
         cin>>choice;
 
+        system("/home/simply_clever/Desktop/progs/Login-page-implementation-using-OOPS-in-C-/myfile.sh");
         switch(choice){
             case 1: cout<<"Welcome to the Registration Portal..!!\n\n\n\n";
                     cout<<"Username :  \n";
